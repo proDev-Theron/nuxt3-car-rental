@@ -6,7 +6,6 @@ const cars = ref([]);
 
 <template>
     <div>
-        <!-- <CarCard /> -->
-        <CarCards />
+        <CarCard />
     </div>
 </template>
