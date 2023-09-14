@@ -1,3 +1,8 @@
+<script setup>
+useHead({
+    title: "car rental"
+})
+</script>
 <template>
     <div>
         <NavBar />
