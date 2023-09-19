@@ -15,8 +15,17 @@ definePageMeta({
 <template>
     <div>
         <div class="flex mt-32">
-            <CarSidebar />
-            <NuxtPage />
+            <NuxtErrorBoundary>
+                <CarSidebar />
+                <NuxtPage />
+                <template #error="{error}">
+                    <div class="text-center flex flex-col mx-auto">
+                        <h1 class="text-5xl text-red-600 mb-4">Something went wrong</h1>
+                        <code>{{ error }}</code>
+                        <button class="text-white bg-blue-400 px-10 py-4 rounded mt-4" @click="error.value=null">Try Again</button>
+                    </div>
+                </template>
+            </NuxtErrorBoundary>
         </div>
     </div>
 </template>
